@@ -5,30 +5,30 @@
 #include <pthread.h>
 
 int array[20];
-int index=0;
+int id=0;
 int number=0;
 
 void *insertNumber1(void *arg) {
   while(1) {
-    array[index]=number;
-    printf("insertNumber1--> array[%d] = %d\n", index, array[index]);
+    array[id]=number;
+    printf("insertNumber1--> array[%d] = %d\n", id, array[id]);
     sleep(2);
-    index++;
+    id++;
     number++;
 
-    if(index>20) break;
+    if(id>20) break;
   }
 }
 
 void *insertNumber2(void *arg) {
   while(1) {
-    array[index]=number;
-    printf("insertNumber2--> array[%d] = %d\n", index, array[index]);
-    index++;
+    array[id]=number;
+    printf("insertNumber2--> array[%d] = %d\n", id, array[id]);
+    id++;
     sleep(1);
     number++;
 
-    if(index>20) break;
+    if(id>20) break;
   }
 }
 
