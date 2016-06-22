@@ -16,7 +16,7 @@ void *insertNumber1(void *arg) {
     id++;
     number++;
 
-    if(id>20) break;
+    if(id>=20) break;
   }
 }
 
@@ -28,7 +28,7 @@ void *insertNumber2(void *arg) {
     sleep(1);
     number++;
 
-    if(id>20) break;
+    if(id>=20) break;
   }
 }
 
